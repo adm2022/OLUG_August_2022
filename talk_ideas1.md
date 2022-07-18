@@ -8,6 +8,14 @@
 I think there are a lot of great tricks that many folks don't know about (numbered but not really ordered):
 
 1. history and CTRL-R
+
+IDEA DUMP: Pipes, redirection, xargs, job control, find, environment variables
+
+awk, sed, history, egrep, git grep
+
+https://swcarpentry.github.io/shell-novice/
+
+
 1. export A=`pwd`  # then use $A as part of a destination
 2. mkdir -p some/big/deep/{part1,part2}/paths/you/want/to/make
 3. cd -

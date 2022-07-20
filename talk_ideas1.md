@@ -45,6 +45,10 @@ done
 1. ss instead of ifconfig
 1. ip instead of ifconfig
 
+-> ## Fun things <-
+
+1. https://cheat.sh/
+
 
 -> ## Last words <-
 

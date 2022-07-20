@@ -40,6 +40,13 @@ done
 
 -------------------------------------------------
 
+-> ## Use this not that <-
+
+1. ss instead of ifconfig
+1. ip instead of ifconfig
+
+
 -> ## Last words <-
 
 [GitHub Repo for this talk](https://github.com/adm2022/OLUG_August_2022).
+

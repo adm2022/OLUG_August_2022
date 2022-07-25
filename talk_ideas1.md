@@ -2,7 +2,7 @@
 %author: Aaron Grothe & Matt Payne
 %date: 2022-08-02
 
--> Slide 1: CLI is Hard <-
+-> CLI is Hard <-
 =========
 
 ## In the terminal, the command line interface, things are hard.
@@ -11,7 +11,7 @@
 ## Until you are used to it.
 
 -------------------------------------------------
--> Slide 2: CLI for Comfort <-
+-> CLI for Comfort <-
 =========
 
 I think there are a lot of great tricks that many folks don't know about
@@ -21,19 +21,29 @@ I think there are a lot of great tricks that many folks don't know about
 1. Result code: `echo $?` (0 is good, not zero is bad)
 
 -------------------------------------------------
--> Slide 3: CLI power tools <-
+-> CLI power tools <-
 =========
+1. redirection
+2. pipes
+3. find
+4. grep, egrep, git grep
+5. xargs
+6. for loops
+7. job controls
+8. environment variables
+   1. source script.sh  # notes about fork & exec
+9. sed & awk
+
 
 -------------------------------------------------
--> Slide 3: CLI power tools: Redirection <-
+-> CLI power tools: Redirection <-
 =========
 redirection
 
 -------------------------------------------------
--> Slide 3: CLI power tools: Pipes <-
+-> CLI power tools: Pipes <-
 =========
 Pipes, 
-
 
 -------------------------------------------------
 -> Slide 3: CLI power tools: find <-

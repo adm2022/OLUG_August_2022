@@ -6,9 +6,14 @@
 =========
 
 ## In the terminal, the command line interface, things are hard.
-1. Don't know your location (pwd - present working directory)
+1. Don't know your location (`pwd` == print working directory)
+2. `cd new_location` == goes to new_location
+   1. Absolute paths start with `/`
+   1. Relative paths do not start with `/`
+   1. `.` is the current directory and `..` is the parent directory
+3. `cd -` == goes to the previous location
 
-## Until you are used to it.
+## Things are hard, until you are used to it.
 
 -------------------------------------------------
 -> CLI for Comfort <-
@@ -46,23 +51,23 @@ redirection
 Pipes, 
 
 -------------------------------------------------
--> Slide 3: CLI power tools: find <-
+-> CLI power tools: find <-
 =========
-find, 
+find
 
 -------------------------------------------------
--> Slide 3: CLI power tools: environment grep etc <-
+-> CLI power tools: environment grep etc <-
 =========
 egrep, git grep
 
 -------------------------------------------------
--> Slide 3: CLI power tools: xargs <-
+-> CLI power tools: xargs <-
 =========
 xargs - When you hit the limit of the # of command line parameters... 
 
 -------------------------------------------------
--> Slide : for loop <-
--------------------------------------------------
+-> CLI poser tools: for loop <-
+=========
 When you want to build up what you're doing
 1. Confirm what you're getting
 2. Then put the action into the loop
@@ -78,19 +83,19 @@ done
 ```
 
 -------------------------------------------------
--> Slide 3: CLI power tools: job control <-
+-> CLI power tools: job control <-
 =========
 job control do things in the background and then bring it into the foreground
 
 
 
 -------------------------------------------------
--> Slide 3: CLI power tools: environment variables <-
+-> CLI power tools: environment variables <-
 =========
 environment variables
 
 -------------------------------------------------
--> Slide 3: CLI power tools: environment sed & awk <-
+-> CLI power tools: environment sed & awk <-
 =========
 awk, sed, 
 
@@ -102,8 +107,8 @@ awk, sed,
 https://swcarpentry.github.io/shell-novice/
 
 -------------------------------------------------
--> Slide 4: CLI power tools <-
-Slide 4
+-> CLI power tools <-
+=========
 
 1. export A=`pwd`  # then use $A as part of a destination
 2. mkdir -p some/big/deep/{part1,part2}/paths/you/want/to/make
@@ -116,23 +121,22 @@ Slide 4
 
 
 -------------------------------------------------
-Slide 6
-
 -> ## Use this not that <-
+=========
 
 1. ss instead of ifconfig
 1. ip instead of ifconfig
 
 -------------------------------------------------
 -> ## Fun things <-
-Slide 7
+=========
 
 1. https://cheat.sh/
 
 
 -------------------------------------------------
 -> ## Last words <-
-Slide 8
+=========
 
 [GitHub Repo for this talk](https://github.com/adm2022/OLUG_August_2022).
 

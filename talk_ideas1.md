@@ -121,6 +121,20 @@ https://swcarpentry.github.io/shell-novice/
 
 
 -------------------------------------------------
+-> ## Timing a bash function <-
+=========
+
+Time is little used function.
+
+#!/bin/bash
+
+time ( sleep 1; sleep 1; sleep 1 )
+
+real    0m3.036s
+user    0m0.006s
+sys     0m0.000s
+
+-------------------------------------------------
 -> ## Use this not that <-
 =========
 

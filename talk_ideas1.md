@@ -155,6 +155,73 @@ Make sure to do do "tldr -u" to download the latest version of the pages
 E.g. tldr vim; tldr wget
 
 -------------------------------------------------
+-> ## ip instead of ifconfig <-
+=========
+
+ip a is the replacement for ifconfig.  net-tools is not installed in a lot of distros including docker instances.
+
+# ip -4 a - show ipv4 address
+# ip -6 a - show ipv6 address
+# ip r - show routes on system
+# ip a show enp0s3 - show stats for enp0s3 interface
+# ip link ls up - show active interfaces
+
+
+-------------------------------------------------
+-> ## ip instead of ifconfig <-
+=========
+
+Modifying an Interface
+
+# ip a add 192.168.0.243/255.255.255.0 dev enp0s3
+
+you can also add a CIDR at the end as well
+
+# ip a add 192.168.0.243/24 dev enp0s3
+
+Deleting an Interface
+
+# ip a del 172.16.0.1/24 dev eth0
+
+Flush address from interfaces
+
+# ip -s -s a f to 172.16.0.1/24
+
+-------------------------------------------------
+-> ## ip instead of ifconfig <-
+=========
+
+Bring an interface up and down
+
+# ip link set eth0 down
+# ip link set eth0 up
+
+Add a default route
+
+# ip route add default via 192.168.0.254
+
+Add a route
+
+# ip route add 192.168.0.0/255.255.255.0 dev eth0
+
+-------------------------------------------------
+-> ## ss instead of netstat <-
+=========
+
+ss a is the replacement for netstat.
+
+from the man page.
+
+# ss -t -a # display all tcp sockets
+# ss -u -a # display all udp sockets
+# ss -t -a -Z # show sockets with SELinux security contexts
+# ss -u -a -Z # display all udp sockets with SELinux contents
+
+show all established SS connections
+
+# ss -o state established '( dport = :ssh or sport = :ssh )'
+
+-------------------------------------------------
 -> ## Fun things <-
 =========
 

@@ -135,6 +135,19 @@ https://swcarpentry.github.io/shell-novice/
 
 
 -------------------------------------------------
+-> ## Future things <-
+=========
+
+GNU Coreutils being rewritten in Rust
+
+https://github.com/uutils/coreutils
+
+Why is it the Future?
+
+Moving away from classic languages like C. Interesting to see how long it will take to reach feature parity with the classic Coreutils.
+
+
+-------------------------------------------------
 -> ## Last words <-
 =========
 

@@ -138,14 +138,28 @@ sys     0m0.000s
 -> ## Use this not that <-
 =========
 
-1. ss instead of ifconfig
+1. tldr instead of man
 1. ip instead of ifconfig
+
+-------------------------------------------------
+
+-> ## tldr instead of man <-
+=========
+
+tldr is the modern replacement for man
+
+Each piece of documentation is pretty short
+
+Make sure to do do "tldr -u" to download the latest version of the pages
+
+E.g. tldr vim; tldr wget
 
 -------------------------------------------------
 -> ## Fun things <-
 =========
 
 1. https://cheat.sh/
+1. bash insulter
 
 
 -------------------------------------------------

@@ -41,9 +41,9 @@ redirection - combine commands and files
 
 1. `>` Send standard out (stdout) to a file
    1. `w > w.ouput`
-1. `>>` Append standard out (stdout) to a file
+2. `>>` Append standard out (stdout) to a file
    1. `uptime >> uptime.ouput`
-1. `<` Take standard in (stdin) to a file
+3. `<` Take standard in (stdin) to a file
    1. `tidy -i -xml < some-badly-formatted.xml`
 
 -------------------------------------------------
@@ -101,9 +101,9 @@ done
 job control do things in the background and then bring it into the foreground
 
 1. CTRL-Z   # put the current jobs into the background.  Suspends it too
-1. `jobs`   # List the jobs
-1. `bg %2`  # Run job two in the background
-1. `fg` *OR* `fg %1` # Bring job one into the foreground
+2. `jobs`   # List the jobs
+3. `bg %2`  # Run job two in the background
+4. `fg` *OR* `fg %1` # Bring job one into the foreground
 
 -------------------------------------------------
 -> CLI power tools: environment variables <-
@@ -116,7 +116,7 @@ environment variables - Global variables that can't be changed by a child proces
 =========
 1. sed - Stream editor, good for editting very large files.  And quick CLI jobs.
    1. `cat bigfile | sed -e 's/Matt/Matt Payne/g'` # Note the vi style substitution
-   1. Really, vi uses ed style substitution
+   2. Really, vi uses ed style substitution
 
 1. awk - VERY handy and quick to learn.   Father of PERL etc.
 
@@ -144,9 +144,9 @@ cat jeffsum.txt | awk ' { for (i=1; i < NF; i++) { w[$i]++; } } END { for (i in 
 
 Not the parts that
 1. Only run at the BEGIN of the input (we don't have one)
-1. Run for each line of the input
+2. Run for each line of the input
    1. Notice that $1 is the first field (word - splits on blanks)
-1. Only run at the END of the input (we use it to dump the associative array)
+3. Only run at the END of the input (we use it to dump the associative array)
 
 -------------------------------------------------
 
@@ -159,9 +159,10 @@ https://swcarpentry.github.io/shell-novice/
 =========
 
 1. export A=`pwd`   # then use $A as part of a destination
-1. export A=$(pwd)  # then use $A as part of a destination, but passes bash lint.
-2. mkdir -p some/big/deep/{part1,part2}/paths/you/{must,want}/to/make
-3. cd - # Like the previous channel on a remote control
-4. the deal with source script vs. ./script
-5. tricks with redirecting and pipes
-6. environment variables -- what's to know other than PATH?
+2. export A=$(pwd)  # then use $A as part of a destination, but passes bash lint.
+3. mkdir -p some/big/deep/{part1,part2}/paths/you/{must,want}/to/make
+4. cd - # Like the previous channel on a remote control
+5. the deal with source script vs. ./script
+6. tricks with redirecting and pipes
+7. environment variables -- what's to know other than PATH?
+

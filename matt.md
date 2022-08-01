@@ -9,15 +9,15 @@
 1. Don't know your location (`pwd` == print working directory)
 2. `cd new_location` == goes to new_location
    1. Absolute paths start with `/`
-   1. Relative paths do not start with `/`
-   1. `.` is the current directory and `..` is the parent directory
+   2. Relative paths do not start with `/`
+   3. `.` is the current directory and `..` is the parent directory
 3. `cd -` == goes to the previous location
 
 ## Things are hard, until you are used to it.
 1. you can not use your mouse
-1. Arrow keys help
-2. CTRL-R reverse searches the history.  Also the `history` command.
-1. Result code: `echo $?` (0 is good, not zero is bad)
+2. Arrow keys help
+3. CTRL-R reverse searches the history.  Also the `history` command.
+4. Result code: `echo $?` (0 is good, not zero is bad)
 
 -------------------------------------------------
 -> CLI power tools <-
@@ -51,14 +51,14 @@ redirection - combine commands and files
 =========
 pipes - combine commands
 1. `cat filename | nl`  # Number the lines of a file
-1. `cat filename | grep -i aaron | nl` # Number lines that contain Aaron (`-i` is case insensitive)
+2. `cat filename | grep -i aaron | nl` # Number lines that contain Aaron (`-i` is case insensitive)
 
 -------------------------------------------------
 -> CLI power tools: find <-
 =========
 find - Walk directory trees and output files & directories
 1. `find .` # print 'em all!
-1. `find . -type f`  # Just print regular files (no directories)
+2. `find . -type f`  # Just print regular files (no directories)
 
 -------------------------------------------------
 -> CLI power tools: environment grep etc <-
@@ -66,7 +66,7 @@ find - Walk directory trees and output files & directories
 egrep, git grep
 1. extended grep handles regular expressions
    1. `find . -type f | egrep -i 'java|kt|ts' | nl` # print files with java or kt or ts in their names
-1. git grep - like grep but only search files being tracked by git
+2. git grep - like grep but only search files being tracked by git
    1. `git grep -i repository \*.java` # search java files for repository
 
 -------------------------------------------------
@@ -158,7 +158,8 @@ https://swcarpentry.github.io/shell-novice/
 -> CLI misc tricks <-
 =========
 
-1. export A=`pwd`  # then use $A as part of a destination
+1. export A=`pwd`   # then use $A as part of a destination
+1. export A=$(pwd)  # then use $A as part of a destination, but passes bash lint.
 2. mkdir -p some/big/deep/{part1,part2}/paths/you/{must,want}/to/make
 3. cd - # Like the previous channel on a remote control
 4. the deal with source script vs. ./script

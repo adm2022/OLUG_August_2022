@@ -1,2 +1,3 @@
-mdp mgp.md # intro stuff
-mdp ajg.md # good stuff
+1. mdp mgp.md # intro stuff
+2. mdp ajg.md # good stuff
+

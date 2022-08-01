@@ -72,7 +72,11 @@ egrep, git grep
 -------------------------------------------------
 -> CLI power tools: xargs <-
 =========
-xargs - When you hit the limit of the # of command line parameters... 
+xargs - Flip stdin to parameters
+
+Also, sometimes, useful when you hit the limit of the # of command line parameters... 
+
+`ps -ef | grep runaway | awk ' { print $2 }' | xargs kill` # kill runaway process
 
 -------------------------------------------------
 -> CLI poser tools: for loop <-
@@ -96,17 +100,42 @@ done
 =========
 job control do things in the background and then bring it into the foreground
 
-
+1. CTRL-Z   # put the current jobs into the background.  Suspends it too
+1. `jobs`   # List the jobs
+1. `bg %2`  # Run job two in the background
+1. `fg` *OR* `fg %1` # Bring job one into the foreground
 
 -------------------------------------------------
 -> CLI power tools: environment variables <-
 =========
-environment variables
+environment variables - Global variables that can't be changed by a child process
+
 
 -------------------------------------------------
 -> CLI power tools: environment sed & awk <-
 =========
-awk, sed, 
+1. sed - Stream editor, good for editting very large files.  And quick CLI jobs.
+   1. `cat bigfile | sed -e 's/Matt/Matt Payne/g'` # Note the vi style substitution
+   1. Really, vi uses ed style substitution
+
+1. awk - VERY handy and quick to learn.   Father of PERL etc.
+
+```
+grep '<testsuite' * | awk ' { printf("%s %s %s %s\n", $(NF-3), $(NF-2), $(NF-1), $NF); }'
+tests="2" errors="0" skipped="0" failures="0">
+tests="3" errors="0" skipped="0" failures="0">
+tests="1" errors="0" skipped="0" failures="0">
+tests="4" errors="0" skipped="0" failures="0">
+tests="6" errors="1" skipped="0" failures="0">
+tests="9" errors="0" skipped="0" failures="0">
+tests="8" errors="0" skipped="0" failures="0">
+tests="9" errors="0" skipped="0" failures="0">
+tests="5" errors="0" skipped="0" failures="0">
+tests="6" errors="0" skipped="0" failures="0">
+tests="3" errors="0" skipped="0" failures="0">
+tests="1" errors="0" skipped="0" failures="0">
+tests="2" errors="0" skipped="0" failures="0">
+```
 
 
 -------------------------------------------------

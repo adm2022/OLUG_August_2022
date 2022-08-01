@@ -37,22 +37,37 @@
 -------------------------------------------------
 -> CLI power tools: Redirection <-
 =========
-redirection
+redirection - combine commands and files
+
+1. `>` Send standard out (stdout) to a file
+   1. `w > w.ouput`
+1. `>>` Append standard out (stdout) to a file
+   1. `uptime >> uptime.ouput`
+1. `<` Take standard in (stdin) to a file
+   1. `tidy -i -xml < some-badly-formatted.xml`
 
 -------------------------------------------------
 -> CLI power tools: Pipes <-
 =========
-Pipes, 
+pipes - combine commands
+1. `cat filename | nl`  # Number the lines of a file
+1. `cat filename | grep -i aaron | nl` # Number lines that contain Aaron (`-i` is case insensitive)
 
 -------------------------------------------------
 -> CLI power tools: find <-
 =========
-find
+find - Walk directory trees and output files & directories
+1. `find .` # print 'em all!
+1. `find . -type f`  # Just print regular files (no directories)
 
 -------------------------------------------------
 -> CLI power tools: environment grep etc <-
 =========
 egrep, git grep
+1. extended grep handles regular expressions
+   1. `find . -type f | egrep -i 'java|kt|ts' | nl` # print files with java or kt or ts in their names
+1. git grep - like grep but only search files being tracked by git
+   1. `git grep -i repository \*.java` # search java files for repository
 
 -------------------------------------------------
 -> CLI power tools: xargs <-

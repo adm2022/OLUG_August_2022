@@ -120,6 +120,8 @@ environment variables - Global variables that can't be changed by a child proces
 
 1. awk - VERY handy and quick to learn.   Father of PERL etc.
 
+AWK command I used at work the other day
+
 ```
 grep '<testsuite' * | awk ' { printf("%s %s %s %s\n", $(NF-3), $(NF-2), $(NF-1), $NF); }'
 tests="2" errors="0" skipped="0" failures="0">
@@ -128,15 +130,23 @@ tests="1" errors="0" skipped="0" failures="0">
 tests="4" errors="0" skipped="0" failures="0">
 tests="6" errors="1" skipped="0" failures="0">
 tests="9" errors="0" skipped="0" failures="0">
-tests="8" errors="0" skipped="0" failures="0">
-tests="9" errors="0" skipped="0" failures="0">
-tests="5" errors="0" skipped="0" failures="0">
-tests="6" errors="0" skipped="0" failures="0">
-tests="3" errors="0" skipped="0" failures="0">
-tests="1" errors="0" skipped="0" failures="0">
-tests="2" errors="0" skipped="0" failures="0">
 ```
 
+-------------------------------------------------
+-> Classic AWK hello world -- word frequencies
+=========
+
+https://jeffsum.com/ to get some random chatter - copy & paste with `cat > jeffsum.txt`
+
+```
+cat jeffsum.txt | awk ' { for (i=1; i < NF; i++) { w[$i]++; } } END { for (i in w) { printf("%s happens %d times\n", i, w[i]); } }'
+```
+
+Not the parts that
+1. Only run at the BEGIN of the input (we don't have one)
+1. Run for each line of the input
+   1. Notice that $1 is the first field (word - splits on blanks)
+1. Only run at the END of the input (we use it to dump the associative array)
 
 -------------------------------------------------
 
@@ -145,14 +155,12 @@ tests="2" errors="0" skipped="0" failures="0">
 https://swcarpentry.github.io/shell-novice/
 
 -------------------------------------------------
--> CLI power tools <-
+-> CLI misc tricks <-
 =========
 
 1. export A=`pwd`  # then use $A as part of a destination
-2. mkdir -p some/big/deep/{part1,part2}/paths/you/want/to/make
-3. cd -
+2. mkdir -p some/big/deep/{part1,part2}/paths/you/{must,want}/to/make
+3. cd - # Like the previous channel on a remote control
 4. the deal with source script vs. ./script
 5. tricks with redirecting and pipes
 6. environment variables -- what's to know other than PATH?
-7. I don't know what else at the moment
-8. setting up starship prompt -- will this work if you're just sshing or putting into a box?

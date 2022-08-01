@@ -2,7 +2,6 @@
 %author: Aaron Grothe & Matt Payne
 %date: 2022-08-02
 
--------------------------------------------------
 -> ## Timing a bash function <-
 =========
 
@@ -112,11 +111,11 @@ fd is a replacement for find, with an easier syntax
 
 find messages file in /var/log is
 
-% fd messages /var/log
+% `fd messages /var/log`
 
 as opposed to
 
-% find /var/log -name '*messages*'
+% `find /var/log -name '*messages*'`
 
 -------------------------------------------------
 -> ## fd instead of find <-
@@ -124,19 +123,19 @@ as opposed to
 
 How to Vi all the files that match a pattern in the current directory
 
-% fd md -X vi
+% `fd md -X vi`
 
 Find equivalent
 
-% find -name '*md*' -exec vi {} \;
+% `find -name '*md*' -exec vi {} \\;`
 
 How to do an ls -l for ALL the files in a folder
 
-% fd -H -l
+% `fd -H -l`
 
 find equivalent
 
-% find -exec ls -l {} \;
+% `find -exec ls -l {} \\;`
 
 Note: you have to explicitly tell it to show hidden files with fd
 

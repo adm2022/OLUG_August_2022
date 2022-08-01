@@ -150,6 +150,18 @@ Caveat:
 
 Isn't included with a lot of distros so violates the reason for using ip instead of ifconfig
 
+-------------------------------------------------
+-> ## grep -r instead of find/xargs/grep <-
+=========
+
+In the average day I will type a variation of this command upwards of 10 times
+
+% find . -type f -print0 | xargs -0 grep -i value 
+
+looks for a value recursively with grep
+
+% grep -r value
+
 
 -------------------------------------------------
 -> ## Fun things <-

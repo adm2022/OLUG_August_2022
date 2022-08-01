@@ -1,1 +1,2 @@
-../mdp/mdp talk_ideas1.md
+mdp mgp.md # intro stuff
+mdp ajg.md # good stuff

@@ -16,6 +16,71 @@ user    0m0.006s
 sys     0m0.000s
 
 -------------------------------------------------
+-> ## Get Bash to Give you a Clue
+=========
+
+% bash -x will echo each line of the bash script as it is run
+
+e.g. have a file a.sh with the following contents
+
+#!/bin/bash
+
+echo "a"
+time (sleep 3)
+-------------------------------------------------
+-> ## Bash -x
+=========
+
+% bash a.sh
+
+output as follows
+
+hi
+
+real    0m3.003s
+user    0m0.003s
+sys     0m0.000s
+
+-------------------------------------------------
+-> ## Bash -x now with -x flag
+=========
+
+% bash -x a.sh
+
+output as follows
+
++ echo hi
+hi
++ sleep 3
+
+real    0m3.009s
+user    0m0.004s
+sys     0m0.000s
+
+-------------------------------------------------
+-> ## Bash -X, what it means
+=========
+
+You will be notified as each line runs.
+This can be very useful when you need it.
+
+-------------------------------------------------
+-> ## Shellcheck, Lint for Bash
+=========
+
+Shellcheck is a program that will go through your shell script and let you know about any "iffy" code.
+
+E.g.
+
+SC1040 When using <<, you can only indent with tabs
+SC1081 Scripts are case sensitive.  Use 'if' not 'If'
+SC1086 Don't use $ on the iterator name in for loops
+
+These can really help you out when you've got a subtle bug.
+
+Can also be a major pain in the butt if it is part of your build process
+
+-------------------------------------------------
 -> ## Use this not that <-
 =========
 
@@ -182,6 +247,25 @@ Why is it the Future?
 
 Moving away from classic languages like C. Interesting to see how long it will take to reach feature parity with the classic Coreutils.
 
+-------------------------------------------------
+-> ## Github BASH Awesome <-
+=========
+
+Google: bash awesome github - and you'll get links to a lot of good bash
+resources
+
+E.g. Bash Hacker's wiki is pretty good - https://wiki.bash-hackers.org/doku.php
+
+-------------------------------------------------
+-> ## 6 Tips <-
+=========
+
+1.  -x is your friend
+2.  Be fearless, unless you've got an rm in your script
+3.  You will screw up, but you'll learn a lot in the process
+4.  The command line is a very efficent way to do things
+5.  Powershell runs on Linux
+6.  Have fun
 
 -------------------------------------------------
 -> ## Last words <-
